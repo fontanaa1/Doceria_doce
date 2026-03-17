@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.cdnfonts.com/css/chellin" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Doceria Doce Encanto</title>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ea92a5',
+                        secondary: '#fb923c'
+                    },
+                    fontFamily: {
+                        chellin: ['Chellin', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-orange-50">
+
+    <!-- HEADER -->
+    <header class="relative h-[300px] sm:h-[400px] w-full overflow-hidden flex flex-col justify-between p-4 bg-black">
+
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/imgs/Doceria.png" alt="Background Doces" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+        </div>
+
+        <div class="relative z-10 flex items-center justify-between w-full max-w-6xl mx-auto">
+            <button id="btn-mobile" class="text-white p-2 focus:outline-none">
+                <svg id="icon-open" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="icon-close" class="hidden w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path d="M6 6l12 12M6 18L18 6" />
+                </svg>
+            </button>
+
+            <button class="bg-[#ffbc0d] hover:bg-[#e6a800] text-black font-bold py-2 px-6 rounded-md transition-colors text-sm sm:text-base">
+                Entrar
+            </button>
+        </div>
+
+        <div class="relative z-10 text-center mb-6">
+            <h1 class="text-white text-2xl sm:text-4xl font-extrabold mb-6 px-4">
+                Como você quer seu doce hoje?
+            </h1>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+                <button class="flex items-center justify-center gap-3 bg-white w-full sm:w-56 py-3 rounded-xl shadow-lg hover:bg-gray-100 transition-all transform active:scale-95">
+                    <span class="text-2xl">🍰</span>
+                    <span class="font-bold text-gray-800">Peça e Retire</span>
+                </button>
+                <button class="flex items-center justify-center gap-3 bg-white w-full sm:w-56 py-3 rounded-xl shadow-lg hover:bg-gray-100 transition-all transform active:scale-95">
+                    <span class="text-2xl">🛵</span>
+                    <span class="font-bold text-gray-800">DoceDelivery</span>
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- MENU MOBILE -->
+    <nav id="menu-mobile" class="hidden bg-white px-6 py-4 shadow-md">
+        <a href="#cardapio" class="block font-bold hover:text-primary transition">Cardápio</a>
+    </nav>
+
+    <!-- BANNER -->
+    <section class="p-6 text-center mt-8">
+        <h2 class="text-5xl font-chellin text-primary">Os melhores doces da cidade</h2>
+        <p class="mt-3 text-gray-600">Feitos com carinho e muito chocolate - Doce Encanto ❤️</p>
+
+        <section class="max-w-6xl mx-auto px-4 mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+                <img src="https://png.pngtree.com/png-clipart/20240607/original/pngtree-fresh-assorted-homemade-gourmet-glazed-donuts-png-image_15264389.png"
+                    alt="Delicioso Donuts" class="w-full h-64 object-cover">
+                <div class="p-4 bg-white">
+                    <h4 class="font-bold text-lg text-primary">Donuts</h4>
+                    <p class="text-gray-600">Donuts recheado com Creme de Avelã.</p>
+                </div>
+            </div>
+
+            <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/047/842/674/small_2x/black-forest-cake-with-chocolate-sponge-cake-cherries-and-whipped-cream-png.png"
+                    alt="Delicioso Bolo de Chocolate" class="w-full h-64 object-cover">
+                <div class="p-4 bg-white">
+                    <h4 class="font-bold text-lg text-primary">Bolo Floresta Negra</h4>
+                    <p class="text-gray-600">Deliciosa combinação de camadas de pão de ló de chocolate, chantilly, cerejas e licor de cereja.</p>
+                </div>
+            </div>
+
+            <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+                <img src="https://png.pngtree.com/png-clipart/20241114/original/pngtree-oreo-chocolate-cupcake-png-image_17022858.png"
+                    alt="Delicioso Bolo de Chocolate" class="w-full h-64 object-cover">
+                <div class="p-4 bg-white">
+                    <h4 class="font-bold text-lg text-primary">Cupcake de Oreo</h4>
+                    <p class="text-gray-600">Delicioso Cupcake com recheio e cobertura cremosa de Oreo.</p>
+                </div>
+            </div>
+
+            <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+                <img src="https://png.pngtree.com/png-clipart/20240910/original/pngtree-deliciously-sweet-strawberry-tart-dessert-png-image_15980915.png"
+                    alt="Torta de Morango" class="w-full h-64 object-cover">
+                <div class="p-4 bg-white">
+                    <h4 class="font-bold text-lg text-primary">Torta de Morango</h4>
+                    <p class="text-gray-600">Extraordinária Torta de Morango.</p>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="px-6 mt-10 max-w-4xl mx-auto">
+
+        <h2 class="text-2xl font-bold text-center mb-6">Cardápio</h2>
+
+        <!-- BOTÕES CATEGORIA -->
+        <div id="nav-categorias" class="flex gap-2 overflow-x-auto whitespace-nowrap pb-2 snap-x">
+
+            <button data-cat="bolos"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-primary text-white text-sm font-bold flex-shrink-0 transition-transform duration-150 cursor-pointer">
+                Bolos
+            </button>
+
+            <button data-cat="cupcakes"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-sm font-bold flex-shrink-0 transition-transform duration-150 cursor-pointer">
+                Cupcakes
+            </button>
+
+            <button data-cat="salgadinhos"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-sm font-bold flex-shrink-0 transition-transform duration-150 cursor-pointer">
+                Doces & Salgadinhos
+            </button>
+
+            <button data-cat="sobremesas"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-sm font-bold flex-shrink-0 transition-transform duration-150 cursor-pointer">
+                Sobremesas Especiais
+            </button>
+
+            <button data-cat="bebidas"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-sm font-bold flex-shrink-0 transition-transform duration-150 cursor-pointer">
+                Bebidas
+            </button>
+
+        </div>
+
+        <!-- ==================== BOLOS ==================== -->
+        <div id="cat-bolos" class="categoria-conteudo mt-8">
+            <div class="text-left font-extrabold text-[22px] mb-4">Bolos</div>
+            <div class="grid grid-cols-2 gap-4">
+
+                <!-- Bolo Floresta Negra -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Bolo Floresta Negra', 85.00, 'Deliciosa combinação de camadas de pão de ló de chocolate, chantilly, cerejas e licor de cereja.', 'https://static.vecteezy.com/system/resources/thumbnails/047/842/674/small_2x/black-forest-cake-with-chocolate-sponge-cake-cherries-and-whipped-cream-png.png', 'b_1')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/047/842/674/small_2x/black-forest-cake-with-chocolate-sponge-cake-cherries-and-whipped-cream-png.png"
+                        alt="Bolo Floresta Negra"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Bolo Floresta Negra</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$85,00</p>
+                    </div>
+                    <button onclick="adicionarItem('b_1', 'Bolo Floresta Negra', 85.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Bolo de Chocolate -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Bolo de Chocolate', 45.00, 'Deliciosa combinação de camadas de pão de ló de chocolate, chantilly e brigadeiro gourmet.', 'https://static.vecteezy.com/system/resources/previews/021/217/324/non_2x/chocolate-cake-with-bonbon-sweet-brigadeiro-png.png', 'b_2')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://static.vecteezy.com/system/resources/previews/021/217/324/non_2x/chocolate-cake-with-bonbon-sweet-brigadeiro-png.png"
+                        alt="Bolo de Chocolate"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Bolo de Chocolate</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$45,00</p>
+                    </div>
+                    <button onclick="adicionarItem('b_2', 'Bolo de Chocolate', 45.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Bolo Red Velvet -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Bolo Red Velvet', 75.00, 'Massa macia com cream cheese.', './assets/imgs/red_valvet.png', 'b_3')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="./assets/imgs/red_valvet.png" alt="Bolo Red Velvet"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Bolo Red Velvet</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$75,00</p>
+                    </div>
+                    <button onclick="adicionarItem('b_3', 'Bolo Red Velvet', 75.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Bolo Morango com Ninho -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Bolo de Morango com Ninho', 70.00, 'Massa branca, creme de leite Ninho e morangos frescos.', './assets/imgs/ninho_morango.png', 'b_4')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="./assets/imgs/ninho_morango.png" alt="Bolo de Morango com Ninho"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Bolo Morango com Ninho</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$70,00</p>
+                    </div>
+                    <button onclick="adicionarItem('b_4', 'Bolo de Morango com Ninho', 70.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Bolo Prestígio -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Bolo Prestígio', 80.00, 'Massa de chocolate com recheio de coco cremoso.', './assets/imgs/prestigio.png', 'b_5')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="./assets/imgs/prestigio.png" alt="Bolo Prestígio"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Bolo Prestígio</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$80,00</p>
+                    </div>
+                    <button onclick="adicionarItem('b_5', 'Bolo Prestígio', 80.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== CUPCAKES ==================== -->
+        <div id="cat-cupcakes" class="categoria-conteudo hidden mt-8">
+            <div class="text-left font-extrabold text-[22px] mb-4">Cupcakes</div>
+            <div class="grid grid-cols-2 gap-4">
+
+                <!-- Cupcake Oreo -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Cupcake Oreo', 12.00, 'Cobertura cremosa com pedaços de Oreo.', 'https://png.pngtree.com/png-clipart/20241114/original/pngtree-oreo-chocolate-cupcake-png-image_17022858.png', 'c_1')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://png.pngtree.com/png-clipart/20241114/original/pngtree-oreo-chocolate-cupcake-png-image_17022858.png"
+                        alt="Cupcake Oreo"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Cupcake Oreo</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$12,00</p>
+                    </div>
+                    <button onclick="adicionarItem('c_1', 'Cupcake Oreo', 12.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Cupcake Morango -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Cupcake Morango', 10.00, 'Recheado com geleia artesanal.', 'https://png.pngtree.com/png-clipart/20231019/original/pngtree-strawberry-cupcake-with-cream-png-image_13371427.png', 'c_2')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://png.pngtree.com/png-clipart/20231019/original/pngtree-strawberry-cupcake-with-cream-png-image_13371427.png"
+                        alt="Cupcake Morango"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Cupcake Morango</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$10,00</p>
+                    </div>
+                    <button onclick="adicionarItem('c_2', 'Cupcake Morango', 10.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Cupcake Chocolate Belga -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Cupcake Chocolate Belga', 12.00, 'Cobertura cremosa com raspas de chocolate meio amargo.', 'https://static.vecteezy.com/system/resources/thumbnails/041/933/431/small/ai-generated-chocolate-cupcake-with-chocolate-frosting-on-transparent-background-free-png.png', 'c_3')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/041/933/431/small/ai-generated-chocolate-cupcake-with-chocolate-frosting-on-transparent-background-free-png.png"
+                        alt="Cupcake Chocolate Belga"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Cupcake Chocolate Belga</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$12,00</p>
+                    </div>
+                    <button onclick="adicionarItem('c_3', 'Cupcake Chocolate Belga', 12.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Cupcake Limão Siciliano -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Cupcake Limão Siciliano', 11.00, 'Leve e refrescante, com cobertura cremosa cítrica.', './assets/imgs/cupcake_limão.png', 'c_4')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="./assets/imgs/cupcake_limão.png"
+                        alt="Cupcake Limão Siciliano"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Cupcake Limão Siciliano</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$11,00</p>
+                    </div>
+                    <button onclick="adicionarItem('c_4', 'Cupcake Limão Siciliano', 11.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== DOCES & SALGADINHOS ==================== -->
+        <div id="cat-salgadinhos" class="categoria-conteudo hidden mt-8">
+            <div class="text-left font-extrabold text-[22px] mb-4">Doces & Salgadinhos</div>
+            <div class="grid grid-cols-2 gap-4">
+
+                <!-- Brigadeiro Gourmet -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Brigadeiro Gourmet', 3.50, 'Feito com chocolate nobre e granulado belga.', 'https://cdn.sodiedoces.com.br/wp-content/uploads/2022/10/28145240/ao-leite_615x500px.png', 'd_1')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://cdn.sodiedoces.com.br/wp-content/uploads/2022/10/28145240/ao-leite_615x500px.png"
+                        alt="Brigadeiro Gourmet"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Brigadeiro Gourmet</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$3,50</p>
+                    </div>
+                    <button onclick="adicionarItem('d_1', 'Brigadeiro Gourmet', 3.50)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Beijinho -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Beijinho', 3.50, 'Tradicional com coco fresco e toque especial.', './assets/imgs/beijinho.png', 'd_2')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="./assets/imgs/beijinho.png"
+                        alt="Beijinho"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Beijinho</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$3,50</p>
+                    </div>
+                    <button onclick="adicionarItem('d_2', 'Beijinho', 3.50)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Bomba de Morango -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Bomba de Morango', 14.00, 'Recheada com creme branco e morango fresco.', './assets/imgs/bomba_morango.png', 'd_3')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="./assets/imgs/bomba_morango.png"
+                        alt="Bomba de Morango"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Bomba de Morango</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$14,00</p>
+                    </div>
+                    <button onclick="adicionarItem('d_3', 'Bomba de Morango', 14.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Croissant Doce -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Croissant Doce', 16.00, 'Recheado com chocolate ou creme de avelã.', 'https://static.vecteezy.com/system/resources/thumbnails/023/742/407/small/fresh-croissant-isolated-illustration-ai-generative-free-png.png', 'd_4')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/023/742/407/small/fresh-croissant-isolated-illustration-ai-generative-free-png.png"
+                        alt="Croissant Doce"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Croissant Doce</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$16,00</p>
+                    </div>
+                    <button onclick="adicionarItem('d_4', 'Croissant Doce', 16.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== SOBREMESAS ESPECIAIS ==================== -->
+        <div id="cat-sobremesas" class="categoria-conteudo hidden mt-8">
+            <div class="text-left font-extrabold text-[22px] mb-4">Sobremesas Especiais</div>
+            <div class="grid grid-cols-2 gap-4">
+
+                <!-- Torta de Morango -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Torta de Morango', 75.90, 'Deliciosa Torta de Morango.', 'https://png.pngtree.com/png-clipart/20240910/original/pngtree-deliciously-sweet-strawberry-tart-dessert-png-image_15980915.png', 's_1')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://png.pngtree.com/png-clipart/20240910/original/pngtree-deliciously-sweet-strawberry-tart-dessert-png-image_15980915.png"
+                        alt="Torta de Morango"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Torta de Morango</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$75,90</p>
+                    </div>
+                    <button onclick="adicionarItem('s_1', 'Torta de Morango', 75.90)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Brownie Gourmet -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Brownie Gourmet', 8.00, 'Brownie artesanal com casquinha crocante e interior macio.', 'https://static.vecteezy.com/system/resources/thumbnails/044/771/065/small/a-stack-of-three-chocolate-brownies-on-a-white-background-ai-generate-png.png', 's_2')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/044/771/065/small/a-stack-of-three-chocolate-brownies-on-a-white-background-ai-generate-png.png"
+                        alt="Brownie Gourmet"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Brownie Gourmet</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$8,00</p>
+                    </div>
+                    <button onclick="adicionarItem('s_2', 'Brownie Gourmet', 8.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Taça da Felicidade -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Taça da Felicidade', 22.00, 'Camadas de mousse, morango fresco e brigadeiro.', './assets/imgs/taça.png', 's_3')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="./assets/imgs/taça.png"
+                        alt="Taça da Felicidade"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Taça da Felicidade</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$22,00</p>
+                    </div>
+                    <button onclick="adicionarItem('s_3', 'Taça da Felicidade', 22.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Banoffee -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Banoffee', 18.00, 'Base crocante, doce de leite, banana e chantilly.', 'https://t3.ftcdn.net/jpg/09/56/71/88/360_F_956718869_TztZBEvNZ9rneE4dXdufkef4nP35mX7z.jpg', 's_4')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://t3.ftcdn.net/jpg/09/56/71/88/360_F_956718869_TztZBEvNZ9rneE4dXdufkef4nP35mX7z.jpg"
+                        alt="Banoffee"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Banoffee</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$18,00</p>
+                    </div>
+                    <button onclick="adicionarItem('s_4', 'Banoffee', 18.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Pudim Tradicional -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Pudim Tradicional', 12.00, 'Clássico pudim de leite condensado com calda caramelizada.', 'https://png.pngtree.com/png-vector/20240207/ourmid/pngtree-caramel-custard-pudding-png-image_11712795.png', 's_5')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://png.pngtree.com/png-vector/20240207/ourmid/pngtree-caramel-custard-pudding-png-image_11712795.png"
+                        alt="Pudim Tradicional"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Pudim Tradicional</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$12,00</p>
+                    </div>
+                    <button onclick="adicionarItem('s_5', 'Pudim Tradicional', 12.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== BEBIDAS ==================== -->
+        <div id="cat-bebidas" class="categoria-conteudo hidden mt-8">
+            <div class="text-left font-extrabold text-[22px] mb-4">Bebidas</div>
+            <div class="grid grid-cols-2 gap-4">
+
+                <!-- Capuccino -->
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Capuccino', 10.00, 'Deliciosa bebida composta por café expresso, leite vaporizado e uma camada de espuma de leite.', 'https://png.pngtree.com/png-vector/20250327/ourmid/pngtree-assorted-coffee-cups-including-cappuccino-cup-with-heart-png-image_15878581.png', 's_1')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://png.pngtree.com/png-vector/20250327/ourmid/pngtree-assorted-coffee-cups-including-cappuccino-cup-with-heart-png-image_15878581.png"
+                        alt="Capuccino"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Capuccino</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$10,00</p>
+                    </div>
+                    <button onclick="adicionarItem('s_1', 'Capuccino', 10.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Chocolate Quente -->
+
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Capuccino', 15.00, 'Cremoso e irresistível.', 'https://static.vecteezy.com/system/resources/thumbnails/068/284/748/small/indulgent-hot-chocolate-delight-brimming-with-marshmallows-and-chocolate-drizzle-against-transparent-png.png', 's_2')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/068/284/748/small/indulgent-hot-chocolate-delight-brimming-with-marshmallows-and-chocolate-drizzle-against-transparent-png.png"
+                        alt="Chocolate Quente"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Chocolate Quente</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$15,00</p>
+                    </div>
+                    <button onclick="adicionarItem('s_2', 'Chocolate Quente', 15.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <!-- Refrigerante Lata -->
+
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Refrigerante Lata', 6.00, 'Coca Cola - Sprite - Fanta - Guaraná.', 'https://marcoluccio.com.br/wp-content/uploads/2021/03/Refrigerante.png', 's_3')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://marcoluccio.com.br/wp-content/uploads/2021/03/Refrigerante.png"
+                        alt="Refrigerante Lata"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Refrigerante Lata</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$6,00</p>
+                    </div>
+                    <button onclick="adicionarItem('s_3', 'Refrigerante Lata', 6.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+
+                <!-- Suco Natural -->
+
+                <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 relative flex flex-col hover:shadow-md transition-shadow group">
+                    <div class="absolute inset-0 z-0 cursor-pointer"
+                        onclick="abrirModalDetalhes('Suco Natural 300ml', 10.00, 'Sabores: laranja, abacaxi ou morango.', 'https://static.vecteezy.com/system/resources/previews/027/309/208/non_2x/orange-juice-with-ai-generated-free-png.png', 's_4')">
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                    <img src="https://static.vecteezy.com/system/resources/previews/027/309/208/non_2x/orange-juice-with-ai-generated-free-png.png"
+                        alt="Suco Natural 300ml"
+                        class="w-full h-24 object-contain mb-2 mt-2 transition-transform duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none relative z-10">
+                    <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+                        <h4 class="font-bold text-sm leading-tight">Suco Natural 300ml</h4>
+                        <p class="text-primary font-black text-lg leading-none mt-1">R$6,00</p>
+                    </div>
+                    <button onclick="adicionarItem('s_4', 'Suco Natural 300ml', 10.00)"
+                        class="w-full bg-primary text-white py-2 rounded-xl text-xs font-bold mt-3 shadow-md hover:opacity-80 active:scale-95 transition-all z-10 relative">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white text-center p-6 mt-16">
+        <p>📍 Rua Kopenhagen, 123 - São Paulo</p>
+        <p>📞 (15) 98108-9666</p>
+        <p>📸 @doce_encanto</p>
+    </footer>
+
+    <!-- MODAL DE DETALHES DO PRODUTO -->
+    <div id="detalhes-modal"
+        class="fixed inset-0 bg-black/70 z-[80] flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div id="detalhes-modal-content"
+            class="bg-white w-full max-w-[400px] rounded-[30px] overflow-hidden transform scale-95 transition-transform duration-300 relative flex flex-col">
+
+            <button onclick="fecharModalDetalhes()"
+                class="absolute top-4 right-4 bg-white/80 backdrop-blur-md text-gray-800 w-10 h-10 rounded-full flex justify-center items-center font-bold text-2xl shadow-sm z-10 hover:text-primary active:scale-90 transition-all">&times;</button>
+
+            <div class="w-full h-[260px] bg-gray-50 flex justify-center items-center p-8 relative">
+                <div class="absolute inset-0 bg-gradient-to-b from-pink-50 to-white opacity-60"></div>
+                <img id="detalhes-img" src="" alt="Produto"
+                    class="w-full h-full object-contain drop-shadow-xl relative z-10 transition-transform duration-500 hover:scale-105">
+            </div>
+
+            <div class="p-6">
+                <h2 id="detalhes-nome" class="text-2xl font-black mb-1 leading-tight tracking-tight">Nome</h2>
+                <p id="detalhes-preco" class="text-2xl font-black text-primary mb-4">R$ 0,00</p>
+                <div class="bg-gray-50 rounded-xl p-4 mb-6">
+                    <p id="detalhes-desc" class="text-gray-600 text-sm leading-relaxed font-medium">Descrição...</p>
+                </div>
+
+                <button id="detalhes-btn-add"
+                    class="w-full bg-primary text-white py-4 rounded-xl text-[17px] font-extrabold shadow-lg hover:opacity-80 active:scale-[0.98] transition-all outline-none flex justify-center items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    Adicionar ao Pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RODAPÉ CARRINHO FIXO -->
+    <div id="carrinho-footer"
+        class="fixed bottom-0 left-0 w-full bg-primary text-white p-4 z-50 shadow-[0_-4px_6px_rgba(0,0,0,0.1)] transform translate-y-full transition-transform duration-300 flex justify-between items-center cursor-pointer"
+        onclick="abrirModalCarrinho()">
+        <div>
+            <p class="text-sm font-medium">Resumo do Pedido</p>
+            <p class="text-xl font-bold">Total: <span id="carrinho-total">R$ 0,00</span></p>
+        </div>
+        <button class="bg-white text-primary px-4 py-2 rounded-lg font-bold shadow-md active:scale-95 transition-all">
+            Ver Carrinho
+        </button>
+    </div>
+
+    <!-- MODAL DO CARRINHO -->
+    <div id="carrinho-modal"
+        class="fixed inset-0 bg-black/60 z-[60] flex flex-col justify-end sm:justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="carrinho-modal-content"
+            class="bg-white w-full sm:w-[500px] h-[85vh] sm:h-auto sm:max-h-[85vh] rounded-t-3xl sm:rounded-2xl flex flex-col transform translate-y-full sm:translate-y-0 sm:scale-95 transition-transform duration-300">
+
+            <div class="p-5 border-b flex justify-between items-center">
+                <h2 class="text-2xl font-bold">Seu Carrinho 🛒</h2>
+                <button onclick="fecharModalCarrinho()"
+                    class="text-3xl font-bold text-gray-400 hover:text-gray-700 focus:outline-none">&times;</button>
+            </div>
+
+            <div id="carrinho-itens-container" class="p-5 flex-1 overflow-y-auto flex flex-col gap-4"></div>
+
+            <div class="p-5 border-t bg-gray-50 rounded-b-3xl sm:rounded-b-2xl">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-bold">Total do Pedido:</span>
+                    <span id="modal-carrinho-total" class="text-2xl font-black text-primary">R$ 0,00</span>
+                </div>
+                <button onclick="fecharPedido()" id="btn-fechar-pedido"
+                    class="w-full bg-primary text-white py-3 rounded-xl text-lg font-bold shadow-lg hover:opacity-80 active:scale-95 transition-all">
+                    Fechar Pedido (Usar GPS)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // ── CATEGORIAS ──────────────────────────────────────────────────────────
+        const botoes = document.querySelectorAll('.btn-cat');
+        const conteudos = document.querySelectorAll('.categoria-conteudo');
+
+        let startX = 0;
+        let startY = 0;
+
+        function mudarCategoria(cat) {
+            conteudos.forEach(div => {
+                if (div.id === 'cat-' + cat) {
+                    div.classList.remove('hidden');
+                } else {
+                    div.classList.add('hidden');
+                }
+            });
+
+            botoes.forEach(btn => {
+                if (btn.dataset.cat === cat) {
+                    btn.classList.add('bg-primary', 'text-white');
+                    btn.classList.remove('bg-gray-200', 'text-gray-800');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-800');
+                }
+            });
+        }
+
+        botoes.forEach(btn => {
+            btn.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                btn.classList.add('scale-95', 'opacity-80');
+            });
+
+            btn.addEventListener('touchend', (e) => {
+                btn.classList.remove('scale-95', 'opacity-80');
+                const endX = e.changedTouches[0].clientX;
+                const endY = e.changedTouches[0].clientY;
+                const deltaX = Math.abs(endX - startX);
+                const deltaY = Math.abs(endY - startY);
+                if (deltaX < 10 && deltaY < 10) {
+                    mudarCategoria(btn.dataset.cat);
+                }
+            });
+
+            btn.addEventListener('touchcancel', () => {
+                btn.classList.remove('scale-95', 'opacity-80');
+            });
+
+            btn.addEventListener('click', () => {
+                mudarCategoria(btn.dataset.cat);
+            });
+        });
+
+        // ── MENU HAMBURGER ───────────────────────────────────────────────────────
+        const btnMobile = document.getElementById('btn-mobile');
+        const menuMobile = document.getElementById('menu-mobile');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+
+        btnMobile.addEventListener('click', () => {
+            menuMobile.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+
+        // ── MODAL DETALHES ───────────────────────────────────────────────────────
+        const modalDetalhes = document.getElementById('detalhes-modal');
+        const modalDetalhesContent = document.getElementById('detalhes-modal-content');
+
+        function abrirModalDetalhes(nome, preco, desc, img, id) {
+            if (navigator.vibrate) navigator.vibrate(40);
+
+            document.getElementById('detalhes-nome').innerText = nome;
+            document.getElementById('detalhes-preco').innerText =
+                preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            document.getElementById('detalhes-desc').innerText = desc;
+            document.getElementById('detalhes-img').src = img;
+
+            document.getElementById('detalhes-btn-add').onclick = function () {
+                adicionarItem(id, nome, preco);
+                fecharModalDetalhes();
+            };
+
+            modalDetalhes.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                modalDetalhesContent.classList.remove('scale-95');
+                modalDetalhesContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function fecharModalDetalhes() {
+            modalDetalhesContent.classList.remove('scale-100');
+            modalDetalhesContent.classList.add('scale-95');
+            setTimeout(() => {
+                modalDetalhes.classList.add('opacity-0', 'pointer-events-none');
+            }, 300);
+        }
+
+        modalDetalhes.addEventListener('click', function (e) {
+            if (e.target === modalDetalhes) fecharModalDetalhes();
+        });
+
+        // ── CARRINHO ─────────────────────────────────────────────────────────────
+        let carrinho = [];
+        const carrinhoFooter = document.getElementById('carrinho-footer');
+        const carrinhoTotalSpan = document.getElementById('carrinho-total');
+        const modal = document.getElementById('carrinho-modal');
+        const modalContent = document.getElementById('carrinho-modal-content');
+        const itensContainer = document.getElementById('carrinho-itens-container');
+        const modalTotalSpan = document.getElementById('modal-carrinho-total');
+
+        function inicializarCarrinho() {
+            const carrinhoSalvo = localStorage.getItem('doce_encanto_carrinho');
+            if (carrinhoSalvo) {
+                carrinho = JSON.parse(carrinhoSalvo);
+                atualizarInterfaceCart();
+            }
+        }
+
+        function adicionarItem(id, nome, preco) {
+            if (navigator.vibrate) navigator.vibrate(200);
+            const index = carrinho.findIndex(item => item.id === id);
+            if (index !== -1) {
+                carrinho[index].quantidade += 1;
+            } else {
+                carrinho.push({ id, nome, preco, quantidade: 1 });
+            }
+            atualizarCarrinho();
+        }
+
+        function abrirModalCarrinho() {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                modalContent.classList.remove('translate-y-full', 'scale-95');
+            }, 10);
+        }
+
+        function fecharModalCarrinho() {
+            modalContent.classList.add('translate-y-full', 'scale-95');
+            setTimeout(() => {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+            }, 300);
+        }
+
+        function aumentarQuantidade(id) {
+            const index = carrinho.findIndex(item => item.id === id);
+            if (index !== -1) {
+                carrinho[index].quantidade += 1;
+                atualizarCarrinho();
+                if (navigator.vibrate) navigator.vibrate(50);
+            }
+        }
+
+        function diminuirQuantidade(id) {
+            const index = carrinho.findIndex(item => item.id === id);
+            if (index !== -1) {
+                if (carrinho[index].quantidade > 1) {
+                    carrinho[index].quantidade -= 1;
+                } else {
+                    carrinho.splice(index, 1);
+                    if (carrinho.length === 0) fecharModalCarrinho();
+                }
+                atualizarCarrinho();
+                if (navigator.vibrate) navigator.vibrate(50);
+            }
+        }
+
+        function atualizarCarrinho() {
+            localStorage.setItem('doce_encanto_carrinho', JSON.stringify(carrinho));
+            atualizarInterfaceCart();
+        }
+
+        function atualizarInterfaceCart() {
+            if (carrinho.length === 0) {
+                carrinhoFooter.classList.add('translate-y-full');
+                return;
+            }
+            const total = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
+            const totalFormatado = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            carrinhoTotalSpan.innerText = totalFormatado;
+            modalTotalSpan.innerText = totalFormatado;
+            carrinhoFooter.classList.remove('translate-y-full');
+            renderizarItensModal();
+        }
+
+        function renderizarItensModal() {
+            if (!itensContainer) return;
+            itensContainer.innerHTML = '';
+
+            carrinho.forEach(item => {
+                const subTotal = (item.preco * item.quantidade).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                const precoUnit = item.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+                const divItem = document.createElement('div');
+                divItem.className = 'flex justify-between items-center border-b pb-4 mt-2';
+                divItem.innerHTML = `
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg">${item.nome}</h4>
+                        <p class="text-sm text-gray-500">${precoUnit}</p>
+                        <p class="font-bold text-primary mt-1">${subTotal}</p>
+                    </div>
+                    <div class="flex items-center gap-3 bg-gray-100 p-2 rounded-xl">
+                        <button onclick="diminuirQuantidade('${item.id}')"
+                            class="w-8 h-8 flex justify-center items-center bg-white rounded-lg font-bold text-xl shadow-sm hover:text-primary active:scale-95 transition-all">-</button>
+                        <span class="font-bold text-lg w-4 text-center">${item.quantidade}</span>
+                        <button onclick="aumentarQuantidade('${item.id}')"
+                            class="w-8 h-8 flex justify-center items-center bg-white rounded-lg font-bold text-xl shadow-sm hover:text-primary active:scale-95 transition-all">+</button>
+                    </div>
+                `;
+                itensContainer.appendChild(divItem);
+            });
+        }
+
+        function fecharPedido() {
+            if (carrinho.length === 0) {
+                alert('O carrinho está vazio!');
+                return;
+            }
+            const btnPedido = document.getElementById('btn-fechar-pedido');
+            const btnOriginalText = btnPedido.innerText;
+            btnPedido.innerText = 'Buscando localização...';
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (posicao) => {
+                        const lat = posicao.coords.latitude;
+                        const lon = posicao.coords.longitude;
+                        btnPedido.innerText = btnOriginalText;
+                        alert(`Pedido fechado! 🎉\nSua localização: ${lat.toFixed(4)}, ${lon.toFixed(4)}\nObrigada pela preferência! ❤️`);
+                        carrinho = [];
+                        fecharModalCarrinho();
+                        atualizarCarrinho();
+                    },
+                    (erro) => {
+                        btnPedido.innerText = btnOriginalText;
+                        console.error(erro);
+                        alert('Não foi possível obter sua localização.');
+                        carrinho = [];
+                        fecharModalCarrinho();
+                        atualizarCarrinho();
+                    }
+                );
+            } else {
+                btnPedido.innerText = btnOriginalText;
+                alert('Navegador sem suporte a GPS.');
+                carrinho = [];
+                fecharModalCarrinho();
+                atualizarCarrinho();
+            }
+        }
+
+        inicializarCarrinho();
+    </script>
+
+</body>
+
+</html>
